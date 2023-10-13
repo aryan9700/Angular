@@ -1,0 +1,17 @@
+<li class="list-group-item" (click)="onClick()">
+  <div
+    [ngClass]="{
+      'text-primary': person.country == 'IN',
+      'text-danger': person.country == 'US',
+      'text-success': person.country == 'UK',
+      'text-info': person.country == 'AU',
+      'text-warning': person.country == 'NP'
+    }"
+    [ngStyle]="{
+      'font-size': getTextSize(person),
+      'text-decoration': 'underline'
+    }"
+  >
+    {{ person.name }} - {{ person.country }}
+  </div>
+</li>
